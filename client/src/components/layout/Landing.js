@@ -23,68 +23,23 @@ class Landing extends Component {
 
   render() {
     return (
-      
       <div style={{ height: "75vh" }} className="container valign-wrapper">
         <div className="row">
           <div className="col s12 center-align">
-            {/* <h4>
-              <b>Welcome</b> to{" "}
-              <span style={{ fontFamily: "monospace" }}>Footballadamus</span>
+            <h4>
+              <b>Ready</b> to{" "}
+              <span style={{ fontFamily: "monospace" }}>Get Started?</span>
             </h4>
             <p className="flow-text grey-text text-darken-1">
-              Duke it out with 4 of your friends or foes, in this turned based,
-              tactical, and unpredictable game experience!
-            </p> */}
+              Once you start , thier is no going back
+            </p>
             <br />
 
-            {/* <div className="parallax-container">
-                  <div className="parallax">
-                    <img src="https://github.com/UlyssesFigueroa/Sandbox/blob/master/client/public/assets/images/blackgreyfootball.jpg?raw=true" alt="" className="responsive-img"/>
-
-                    </div>
-                  </div> */}
-               
-
             <div className="row">
-              <div className="col">
-                {/* <h2 style={hStyle}>Make the call!</h2>
-                <p style={pStyle}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
-                </p> */}
-
-             
-
-                {/* <h2 style={hStyle}>Live Action, Live Updates</h2>
-                <p style={pStyle}>
-                  dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                  minim veniam, quis nostrud exercitation ullamco laboris nisi
-                  ut aliquip ex ea commodo consequat.
-                </p>
-
-                <h2 style={hStyle}>Trash Talk</h2>
-                <p style={pStyle}>
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                  occaecat cupidatat non proident, sunt in culpa qui officia
-                  deserunt mollit anim id est laborum.
-                </p>
-
-                <h2 style={hStyle}>Gain Braggin Rights</h2>
-                <p style={pStyle}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                  qui officia deserunt mollit anim id est laborum.
-                </p> */}
-              </div>
+              <div className="col"></div>
             </div>
           </div>
           <br />
-          
 
           <div className="col s6">
             <Link

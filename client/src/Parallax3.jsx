@@ -8,7 +8,8 @@ const pStyle = {
   };
   
   const hStyle = {
-    fontFamily: "Teko, sans-serrif"
+    fontFamily: "Teko, sans-serrif",
+    textAlign: "center",
   };
 
 const Parallax3 = () => {
