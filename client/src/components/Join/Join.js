@@ -1,11 +1,20 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 import './Join.css';
 
-export default function SignIn() {
+function SignIn(props) {
+  const history = useHistory();
   const [name, setName] = useState('');
   const [room, setRoom] = useState('');
+
+  const handleClick = e => {
+    e.preventDefault();
+    history.push(`/chat?name=${name}&room=${room}`);
+    if(!name || !room){
+      return;
+    }
+  }
 
   return (
     <div className="joinOuterContainer">
@@ -17,10 +26,10 @@ export default function SignIn() {
         <div>
           <input placeholder="Room" className="joinInput mt-20" type="text" onChange={(event) => setRoom(event.target.value)} />
         </div>
-        <Link onClick={e => (!name || !room) ? e.preventDefault() : null} to={`/chat?name=${name}&room=${room}`}>
-          <button className={'button mt-20'} type="submit">Sign In</button>
-        </Link>
+          <button onClick={handleClick} className={'button mt-20'}>Sign In</button>
       </div>
     </div>
   );
 }
+
+export default SignIn;

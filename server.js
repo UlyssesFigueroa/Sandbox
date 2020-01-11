@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const logger = require("morgan");
 const bodyParser = require("body-parser");
 const passport = require("passport");
 const http = require('http');
@@ -18,15 +19,6 @@ const socketio = require('socket.io');
 // });
 // var io = require('socket.io')(server, { origins: '*:*'});
 // const app = express();
-// app.use(function(req, res, next) {
-//   res.header("Access-Control-Allow-Origin", 'http://localhost:3000'); 
-//   //<--you can change this with a specific url like http://localhost:4200
-//   res.header("Access-Control-Allow-Credentials", true);
-//   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
-//   res.header("Access-Control-Allow-Headers",
-// 'Origin,X-Requested-With,Content-Type,Accept,content-type,application/json,Authorization');
-//   next();
-// });
 
 // var io = socketio.listen(server, { origins: '*:*' });
 
@@ -37,13 +29,10 @@ const users = require("./routes/api/users");
 
 const app = express();
 const server = http.createServer(app);
-const io = socketio(server);
+const io = socketio(server, { origins: '*:*'});
 
 app.use(cors());
-app.use(router);
-
-
-
+app.use(logger("dev"))
 // Bodyparser middleware
 app.use(
   bodyParser.urlencoded({
@@ -51,6 +40,11 @@ app.use(
   })
 );
 app.use(bodyParser.json());
+
+// Routes
+app.use("/api/users", users);
+app.use(router);
+
 
 // DB Config
 const db = require("./config/keys").mongoURI;
@@ -70,8 +64,7 @@ app.use(passport.initialize());
 // Passport config
 require("./config/passport")(passport);
 
-// Routes
-app.use("/api/users", users);
+
 
 const port = process.env.PORT || 5000;
 
