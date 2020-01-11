@@ -17,7 +17,13 @@ import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
+// Parallax start
+import Parallax from "./Parallax";
+import Parallax2 from "./Parallax2";
+import Parallax3 from "./Parallax3";
+import Parallax4 from "./Parallax4";
 
+// Parallax end
 // import Navbar from "./components/appLayout/Navbar";
 // import SignUp from "./components/appLayout/SignUp";
 // import SignIn from "./components/appLayout/SignIn";
@@ -59,6 +65,11 @@ class App extends React.Component {
         <Router>
           <div className="App">
             <Navbar />
+           
+            <Parallax/>
+            <Parallax2/>
+            <Parallax3/>
+            <Parallax4/>
             <Route exact path="/" component={Landing} />
             {/* <Route path="/join" exact component={Join} />
             <Route path="/chat" component={Chat} /> */}
@@ -80,6 +91,7 @@ class App extends React.Component {
               <PrivateRoute path="/join" exact component={Join} />
               <PrivateRoute path="/chat" component={Chat} />
               {/* <PrivateRoute exact path="/profile" component={Profile} /> */}
+              
             </Switch>
             
           </div>

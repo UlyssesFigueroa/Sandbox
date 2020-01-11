@@ -22,13 +22,13 @@ const socketio = require('socket.io');
 
 // var io = socketio.listen(server, { origins: '*:*' });
 
-const { addUser, removeUser, getUser, getUsersInRoom, getAllRooms } = require('././routes/users');
+const { addUser, removeUser, getUser, getUsersInRoom, getAllRooms } = require('./routes/users');
 
 const router = require('./routes/router');
 const users = require("./routes/api/users");
 
 const app = express();
-const server = http.createServer(app);
+const server = http.Server(app);
 const io = socketio(server, { origins: '*:*'});
 
 app.use(cors());
@@ -64,22 +64,10 @@ app.use(passport.initialize());
 // Passport config
 require("./config/passport")(passport);
 
-
-
 const port = process.env.PORT || 5000;
 
-app.listen(port, () => console.log(`Server up and running on port ${port} !`));
-
-
-
-
-
-
-
-
-
-
 io.on('connect', (socket) => {
+  console.log("Made it")
   socket.on('join', ({ name, room }, callback) => {
     const { error, user } = addUser({ id: socket.id, name, room });
 
@@ -92,7 +80,6 @@ io.on('connect', (socket) => {
 
     io.to(user.room).emit('roomData', { room: user.room, users: getUsersInRoom(user.room) });
     io.to(gameRoom.room).emit('roomData', { room: getAllRooms() });
-
 
     callback();
   });

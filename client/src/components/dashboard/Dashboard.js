@@ -84,8 +84,8 @@ return (
             >
               Create Game
             </button>
-            <PlayerChoices />
-            <Players />
+            {/* <PlayerChoices />
+            <Players /> */}
             <button
               style={{
                 width: "150px",
