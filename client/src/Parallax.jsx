@@ -17,7 +17,7 @@ const pStyle = {
 
   
 
-const Parallax = () => {
+const Parallax = props => {
     useEffect(()=>{
 let elements = document.querySelectorAll(".parallax");
 M.Parallax.init(elements);
@@ -26,16 +26,15 @@ M.Parallax.init(elements);
     return (
         <div className="parallax-container">
             <div className="parallax">
-               <img src="https://github.com/UlyssesFigueroa/Sandbox/blob/master/client/public/assets/images/blackgreyfootball.jpg?raw=true" alt="parallax_1"/> 
+               <img src={props.url} alt="parallax_1"/> 
             </div>
             <div className="section white">
             <h1 style={welcomeStyle}>
-              Welcome to Footballadamus
+              {props.title}
             </h1>
             
                 <p style={pStyle}>
-                Duke it out with 4 of your friends or foes, in this turned based,
-              tactical, and unpredictable game experience!
+                {props.paragraph}
                 </p>
             </div>
 

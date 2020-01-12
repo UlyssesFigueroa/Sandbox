@@ -18,13 +18,7 @@ import Login from "./components/auth/Login";
 import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
 
-// Parallax start///
-import Parallax from "./Parallax";
-import Parallax2 from "./Parallax2";
-import Parallax3 from "./Parallax3";
-import Parallax4 from "./Parallax4";
-import Parallax5 from "./Parallax5";
-// Parallax end//
+
 
 // import Navbar from "./components/appLayout/Navbar";
 // import SignUp from "./components/appLayout/SignUp";
@@ -67,12 +61,6 @@ class App extends React.Component {
         <Router>
           <div className="App">
             <Navbar />
-           
-            <Parallax/>
-            <Parallax2/>
-            <Parallax3/>
-            <Parallax4/>
-            <Parallax5/>
             <Route exact path="/" component={Landing} />
             {/* <Route path="/join" exact component={Join} />
             <Route path="/chat" component={Chat} /> */}
