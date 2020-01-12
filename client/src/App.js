@@ -18,6 +18,8 @@ import Login from "./components/auth/Login";
 import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
 
+
+
 // import Navbar from "./components/appLayout/Navbar";
 // import SignUp from "./components/appLayout/SignUp";
 // import SignIn from "./components/appLayout/SignIn";
@@ -80,6 +82,7 @@ class App extends React.Component {
               <PrivateRoute path="/join" exact component={Join} />
               <PrivateRoute path="/chat" component={Chat} />
               {/* <PrivateRoute exact path="/profile" component={Profile} /> */}
+              
             </Switch>
             
           </div>
