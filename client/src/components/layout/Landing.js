@@ -22,7 +22,7 @@ class Landing extends Component {
         {/* <div className="col"> */}
         <Parallax
           paragraph="Duke it out with 4 of your friends or foes, in this turned based,tactical, and unpredictable game experience!"
-          title="Welcome to Footballadamus"
+          title="Welcome to Footballadamus!"
           url="https://github.com/UlyssesFigueroa/Sandbox/blob/jorge/client/public/assets/images/theBoys.jpg?raw=truee"
         />
         {/* </div> */}
