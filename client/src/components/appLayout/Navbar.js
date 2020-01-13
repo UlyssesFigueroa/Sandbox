@@ -2,16 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Navbar() {
-  // const [isNavActive, setNavActive] = useState(false);
-  // state = {
-  //   show: false
-  // };
-  // showModal = e => {
-  //   this.setState({
-  //     show: true
-  //   });
-  // };
-
   return (
     // <!-- Dropdown Structure -->
     <div>
@@ -36,7 +26,7 @@ function Navbar() {
         <div class="nav-wrapper">
           <ul class="brand-logo navbar-ul">
             <li>
-            <Link
+              <Link
                 to="rules"
                 style={{
                   backgroundColor: "#266BF1"
@@ -49,7 +39,7 @@ function Navbar() {
               </Link>
             </li>
             <li>
-            <Link
+              <Link
                 to="Share"
                 style={{
                   backgroundColor: "#266BF1"
@@ -63,7 +53,6 @@ function Navbar() {
             </li>
             <li>
               <img
-              
                 src="../../../assets/images/Footballimage.png"
                 alt="football-icon"
                 height="56px"

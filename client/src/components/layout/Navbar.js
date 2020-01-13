@@ -25,9 +25,6 @@ class Navbar extends Component {
        style={{
           backgroundColor: "#2e36ad"}}>
         <div class="nav-wrapper">
-          {/* <a href="#!" class="brand-logo">
-      <img src="../../../assets/images/Footballimage.png" height="50px"/>
-    </a> */}
           <ul class="brand-logo navbar-ul">
             <li><Link
               to="/login"
