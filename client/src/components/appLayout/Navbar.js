@@ -27,38 +27,74 @@ function Navbar() {
           <a href="#!">three</a>
         </li>
       </ul>
-      <nav style={{
-                  backgroundColor:"#2e36ad",
-                  fontFamily: "monospace"
-                }}>
+      <nav
+        style={{
+          backgroundColor: "#2e36ad",
+          fontFamily: "monospace"
+        }}
+      >
         <div class="nav-wrapper">
           <ul class="brand-logo navbar-ul">
             <li>
-              <Link
-                to="/rules"
-                className="white-text"
+            <Link
+                to="rules"
+                style={{
+                  backgroundColor: "#266BF1"
+                }}
+                // className="btn"
+                type="submit"
+                name="action"
               >
                 Rules
               </Link>
             </li>
             <li>
-              <a href="#">Share</a>
+            <Link
+                to="Share"
+                style={{
+                  backgroundColor: "#266BF1"
+                }}
+                // className="btn"
+                type="submit"
+                name="action"
+              >
+                Share
+              </Link>
             </li>
             <li>
               <img
+              
                 src="../../../assets/images/Footballimage.png"
                 alt="football-icon"
                 height="56px"
               />
             </li>
             <li>
-              <a href="https://github.com/UlyssesFigueroa/Sandbox">Github</a>
+              <Link
+                to="register"
+                style={{
+                  backgroundColor: "#266BF1"
+                }}
+                // className="btn"
+                type="submit"
+                name="action"
+              >
+                Sign
+              </Link>
             </li>
-            {/* <!-- Dropdown Trigger --> */}
+
             <li>
-              <a class="dropdown-trigger" href="/login" data-target="dropdown1">
-                <i class="medium material-icons right ">account_circle</i>
-              </a>
+              <Link
+                to="login"
+                style={{
+                  backgroundColor: "#266BF1"
+                }}
+                // className="btn"
+                type="submit"
+                name="action"
+              >
+                Log In
+              </Link>
             </li>
           </ul>
         </div>
