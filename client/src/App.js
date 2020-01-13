@@ -11,7 +11,7 @@ import './App.css';
 import { Provider } from "react-redux";
 import store from "./store";
 
-import Navbar from "./components/layout/Navbar";
+// import Navbar from "./components/layout/Navbar";
 import Landing from "./components/layout/Landing";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
@@ -60,7 +60,7 @@ class App extends React.Component {
       <Provider store={store}>
         <Router>
           <div className="App">
-            <Navbar />
+            {/* <Navbar /> */}
             <Route exact path="/" component={Landing} />
             {/* <Route path="/join" exact component={Join} />
             <Route path="/chat" component={Chat} /> */}
