@@ -31,6 +31,10 @@ const app = express();
 const server = http.Server(app);
 const io = socketio(server, { origins: '*:*'});
 
+var MongoDB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+
+mongoose.connect(MOMGODB_URI);
+
 app.use(cors());
 app.use(logger("dev"))
 // Bodyparser middleware
@@ -102,4 +106,4 @@ io.on('connect', (socket) => {
   })
 });
 
-app.listen(process.env.PORT || 5001, () => console.log(`Server has started.`));
+app.listen(process.env.PORT || 5000, () => console.log(`Server has started.`));

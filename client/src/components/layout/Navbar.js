@@ -21,11 +21,10 @@ class Navbar extends Component {
         <li class="divider"></li>
         <li><a href="#!">three</a></li>
       </ul>
-      <nav>
+      <nav
+       style={{
+          backgroundColor: "#2e36ad"}}>
         <div class="nav-wrapper">
-          {/* <a href="#!" class="brand-logo">
-      <img src="../../../assets/images/Footballimage.png" height="50px"/>
-    </a> */}
           <ul class="brand-logo navbar-ul">
             <li><Link
               to="/login"
@@ -33,7 +32,7 @@ class Navbar extends Component {
                 fontFamily: "monospace"
               }}
               className="white-text"
-            >My Game
+            >Game
             </Link></li>
             <li><a href="/login">Lobby</a></li>
             <li>
